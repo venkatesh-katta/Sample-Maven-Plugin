@@ -18,6 +18,7 @@ package sample.plugin;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 
 import java.io.File;
@@ -31,7 +32,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-@Mojo( name = "venki")
+@Mojo( name = "venki",requiresProject = false, defaultPhase = LifecyclePhase.INSTALL)
 public class MyMojo extends AbstractMojo {
     /**
      * Location of the file.
