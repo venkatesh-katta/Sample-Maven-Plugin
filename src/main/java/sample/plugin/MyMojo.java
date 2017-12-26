@@ -31,7 +31,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-@Mojo( name = "touch")
+@Mojo( name = "venki")
 public class MyMojo extends AbstractMojo {
     /**
      * Location of the file.
