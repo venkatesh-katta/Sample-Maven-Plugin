@@ -18,6 +18,7 @@ package sample.plugin;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.Mojo;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -29,6 +30,8 @@ import java.io.IOException;
  * @goal touch
  * @phase process-sources
  */
+
+@Mojo( name = "touch")
 public class MyMojo extends AbstractMojo {
     /**
      * Location of the file.
